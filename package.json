@@ -1,0 +1,61 @@
+{
+  "name": "imageManager",
+  "version": "1.0.0",
+  "description": "imageManager, react responsive spa",
+  "main": "lib/ImageManager.js",
+  "author": "Tetsuya Chiba",
+  "license": "MIT",
+  "homepage": "https://tetsuyac.github.io/imageManager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tetsuyac/imageManager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tetsuyac/imageManager/issues"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-eslint": "^4.0.10",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
+    "eslint": "^1.2.1",
+    "eslint-plugin-react": "^3.2.3",
+    "gulp": "^3.9.0",
+    "jquery": "^2.1.4",
+    "jsdom": "^8.0.1",
+    "lodash": "^3.10.1",
+    "mocha": "^3.2.0",
+    "react": "~15.4.0",
+    "react-addons-test-utils": "^15.2.0",
+    "react-component-gulp-tasks": "^0.7.7",
+    "react-dom": "^15.4.2",
+    "react-images": "~0.5.2",
+    "react-measure": "^1.4.5",
+    "react-sticky-el": "^1.0.3",
+    "sinon": "^1.17.7"
+  },
+  "peerDependencies": {
+    "react": "~15.4.0",
+    "react-dom": "~15.4.0"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "scripts": {
+    "build": "gulp clean && NODE_ENV=production gulp build",
+    "bump": "gulp bump",
+    "bump:major": "gulp bump:major",
+    "bump:minor": "gulp bump:minor",
+    "examples": "gulp dev:server",
+    "lint": "eslint .",
+    "publish:examples": "gulp publish:examples",
+    "release": "gulp release",
+    "start": "gulp dev",
+    "watch": "gulp watch:lib",
+    "test": "mocha tests/lib/.setup.js tests/spec/ImageManagerSpec.js"
+  },
+  "ecmaFeatures": {
+    "modules": true
+  }
+}
