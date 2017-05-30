@@ -51,6 +51,7 @@ class App extends React.Component {
       currentImage: 0,
       appKey: this.state.searchText
     })
+    this.loadMorePhotos()
     e.preventDefault();
   }
 
@@ -78,7 +79,7 @@ class App extends React.Component {
     $.ajax({
       url: 'https://api.flickr.com/services/rest/' +
       '?method=flickr.photos.search' +
-      '&api_key=49e55423859a4e5c5f45cb893441d891' +
+      '&api_key=bac823562d3b3263501da80ea7572049' +
       '&text=' + this.state.searchText +
       '&format=json' +
       '&per_page=21&page=' + this.state.pageNum + '&extras=url_m,url_c,url_l,url_h,url_o',
